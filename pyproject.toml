@@ -1,0 +1,18 @@
+[project]
+name = "phone-number-lookup"
+version = "1.0.0"
+description = "Look up the public numbering-plan details of a phone number: valid, formats, region, carrier, time zones and line type."
+requires-python = ">=3.10"
+authors = [{ name = "Anthony Evo" }]
+license = { text = "MIT" }
+dependencies = ["phonenumbers>=8.13"]
+
+[project.scripts]
+phone-lookup = "phone_lookup.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["phone_lookup"]
